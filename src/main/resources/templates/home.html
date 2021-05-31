@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Menu</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+		table, th, td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+		</style>
+	</head>
+	<body>
+		<a href="insert">Inserir novo Produto</a> <br> <br>
+		<table style="width:100%">
+			<tr>
+			    <th>ID</td>
+			    <th>Nome</td>
+			    <th>valor</td>
+			    <th>Quantidade</td>
+	
+			</tr>
+			<tr th:each="product : ${products}">
+			    <td th:text="${product.name}"></td>
+			    <td th:text="${product.value}"></td>
+			    <td th:text="${product.quantity}"></td>
+			   
+			</tr>
+		</table>
+	</body>
+</html>
